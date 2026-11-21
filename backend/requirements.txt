@@ -1,0 +1,38 @@
+# ─── Django core ──────────────────────────────────────────────────────────────
+Django==5.0.6
+djangorestframework==3.15.2
+djangorestframework-simplejwt==5.3.1
+django-cors-headers==4.4.0
+
+# ─── Database ─────────────────────────────────────────────────────────────────
+psycopg2-binary==2.9.9
+pgvector==0.5.0           # pgvector Django integration (used with PostgreSQL)
+dj-database-url==2.1.0    # Parse DATABASE_URL in production settings
+
+# ─── Async task queue ─────────────────────────────────────────────────────────
+celery==5.4.0
+redis==5.0.8
+
+# ─── Document extraction ──────────────────────────────────────────────────────
+PyMuPDF==1.24.9           # PDF text extraction (fitz)
+python-docx==1.1.2        # DOCX extraction
+
+# ─── OCR ──────────────────────────────────────────────────────────────────────
+pytesseract==0.3.13       # Tesseract Python wrapper
+Pillow==10.4.0            # Image handling
+
+# ─── AI / LLM + Embeddings ────────────────────────────────────────────────────
+openai==1.40.0            # OpenAI SDK — GPT-4o-mini + text-embedding-3-small
+
+# ─── Vector math (dev cosine similarity without pgvector) ─────────────────────
+numpy==2.5.2              # cosine similarity for SQLite dev mode
+
+# ─── Production server ────────────────────────────────────────────────────────
+gunicorn==22.0.0          # Production WSGI server
+
+# ─── Utilities ────────────────────────────────────────────────────────────────
+python-dotenv==1.0.1
+
+# ─── Testing ──────────────────────────────────────────────────────────────────
+pytest==8.3.2
+pytest-django==4.8.0
